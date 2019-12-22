@@ -21,4 +21,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/moviezone', 'HomeController@moviezone')->name('moviezone');
 Route::get('/techzone', 'HomeController@techzone')->name('techzone');
 Route::get('/contact', 'HomeController@contact')->name('contact');
-Route::get('/join', 'HomeController@join')->name('join');
+Route::get('/join', 'HomeController@join')->name('join')->middleware('auth');
+
+//$this->middleware('auth');

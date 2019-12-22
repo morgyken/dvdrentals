@@ -22,9 +22,11 @@ class CreateUsersTable extends Migration
             $table->string('address');
             $table->string('usertype'); 
             $table->string('occupation');
-            $table->string('phone');
-            $table->rememberToken();
+            $table->string('phone');            
+            $table->string('preferedcontact'); 
+            $table->string('othernames');       
             $table->timestamps();
+            $table->rememberToken();
         });
     }
 

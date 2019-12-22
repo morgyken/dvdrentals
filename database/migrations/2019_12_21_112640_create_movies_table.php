@@ -27,7 +27,8 @@ class CreateMoviesTable extends Migration
             $table->string('rental');
             $table->string('purchaseprice');
             $table->string('availability');
-            $table->string('imauri');
+            $table->string('imageurl');
+            $table->string('genre');
             $table->rememberToken();
                      
         });

@@ -10,33 +10,8 @@
       <!-- Loads the standard nav header and sets the correct nav button as the current page -->
       @include('header')    <script type="text/javascript">
          document.getElementById("techZoneNav").className = "currentpage";  
-      </script> 
-      <div id="leftcol">
-         <h2> New Releases</h2>
-         <fieldset>
-       <legend>The Hunger Games: Mockingjay - Part 1</legend>
-       <img class="moviePoster" src="TechZone%20-%20DVD%20Emporium_files/1436253326mockingjay1.jpg" alt="Movie poster" width="105" height="150">
-       <span class="movieHeading">Genre: </span>Sci-fi<br>
-       <span class="movieHeading">Director: </span>Francis Lawrence<br>
-       <span class="movieHeading">Classification: </span>M<br>
-       <span class="movieBold">Starring: </span>Jennifer Lawrence, Josh Hutcherson, Liam Hemsworth, Donald Sutherland, Philip Seymour Hoffman and Julianne Moore.
-       <p><span class="movieBold">Fire burns brighter in the darkness</span></p>
-       <p>Katniss Everdeen is in District 13 after she shatters the 
-games forever. Under the leadership of President Coin and the advice of 
-her trusted friends, Katniss spreads her wings as she fights to save 
-Peeta and a nation moved by her courage.</p>
-       </fieldset><br><br><fieldset>
-       <legend>Jupiter Ascending</legend>
-       <img class="moviePoster" src="TechZone%20-%20DVD%20Emporium_files/1436253928jupiter.jpg" alt="Movie poster" width="105" height="150">
-       <span class="movieHeading">Genre: </span>Sci-fi<br>
-       <span class="movieHeading">Director: </span>The Wachowskis<br>
-       <span class="movieHeading">Classification: </span>M<br>
-       <span class="movieBold">Starring: </span>Channing Tatum, Mila Kunis and Sean Bean.
-       <p><span class="movieBold">Expand your universe.</span></p>
-       <p>A young woman discovers her destiny as an heiress of 
-intergalactic nobility and must fight to protect the inhabitants of 
-Earth from an ancient and destructive industry.</p>
-       </fieldset>      </div>
+      </script>       
+      @include ('left-col');
       <div id="rightcol">
                   <div id="expert_info">
             <h4>Our Store IT Expert</h4>

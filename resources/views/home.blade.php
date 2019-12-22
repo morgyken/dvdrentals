@@ -16,30 +16,8 @@
          document.getElementById("indexNav").className = "currentpage";  
       </script>
       
-      <div id="leftcol">
-         <h2> New Releases</h2>
-         <fieldset>
-       <legend>Furious Seven</legend>
-       <img class="moviePoster" src="{{URL::asset('res/res1/img/1436457000FF7.jpg')}}" alt="Movie poster" width="105" height="150">
-       <span class="movieHeading">Genre: </span>Thriller<br>
-       <span class="movieHeading">Director: </span>Justin Lin<br>
-       <span class="movieHeading">Classification: </span>PG<br>
-       <span class="movieBold">Starring: </span>Vin Diesel, Paul Walker, Jason Statham, Kurt Russell, Michelle Rodriguez and Dwayne Johnson.
-       <p><span class="movieBold">One last ride.</span></p>
-       <p>Deckard Shaw seeks revenge against Dominic Toretto and his family for his comatose brother.</p>
-       </fieldset><br><br><fieldset>
-       <legend>Edge of Tomorrow</legend>
-       <img class="moviePoster" src="{{URL::asset('res/res1/img/125075252edgeoftomorrow.jpg ')}}" alt="Movie poster" width="105" height="150">
-       <span class="movieHeading">Genre: </span>Action<br>
-       <span class="movieHeading">Director: </span>Doug Liman<br>
-       <span class="movieHeading">Classification: </span>M<br>
-       <span class="movieBold">Starring: </span>Tom Cruise, Emily Blunt, Brendan Gleeson, Jonas Armstrong and Tony Way.
-       <p><span class="movieBold">Live, Die, Repeat </span></p>
-       <p>A military officer is brought into an alien war against an 
-extraterrestrial enemy who can reset the day and know the future. When 
-this officer is enabled with the same power, he teams up with a Special 
-Forces warrior to try and end the war.</p>
-       </fieldset>      </div>
+      @include ('left-col');
+      
       <div id="rightcol">
                   <h1>Welcome to the Emporium</h1>
          <div class="articleBody">

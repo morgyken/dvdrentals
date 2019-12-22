@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use  App\movie;
+
 class HomeController extends Controller
 {
     /**
@@ -13,7 +15,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        
     }
 
     /**
@@ -23,25 +25,51 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+      
+      $data = movie::all();
+
+      // return $data;
+
+        return view('home', ['data' => $data]);
     }
 
     public function moviezone()
     {
-        return view('moviezone');
+        $data = movie::all();
+
+      // return $data;
+
+        return view('moviezone', ['data' => $data]);
+        //return view('moviezone');
     }
 
 
     public function techzone()
     {
-        return view('techzone');
+        $data = movie::all();
+
+      // return $data;
+
+        return view('techzone', ['data' => $data]);
+        
     }
 
 
     public function contact()
     {
-        return view('contact');
+        $data = movie::all();
+
+      // return $data;
+
+        return view('contact', ['data' => $data]);
+   
     }
+
+    public function register(Request req)
+    {
+        return view('join');
+    }
+
 
 
     public function join()
