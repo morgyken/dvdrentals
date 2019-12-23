@@ -50,19 +50,26 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
+
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+
             'password' => ['required', 'string', 'min:8', 'confirmed'],
 
             'address' => ['required', 'string', 'max:255'],
             
             'othernames' => ['required', 'string', 'max:255'],
+
             'preferedcontact' => ['required', 'string', 'max:255'],
 
             'usertype' => ['required', 'string', 'max:255'],
+
             'occupation' => ['required', 'string'],
+
+            'mobile' => ['required', 'string', 'max:255'],
            
             'phone' => ['required', 'string', 'max:255'],
-           
+
+            'magazine'  => ['required', 'string', 'max:255'],           
             
         ]);
     }
@@ -80,14 +87,18 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
 
-            'address' => $data['name'],
-            'usertype' => $data['email'],
-            'phone' => Hash::make($data['password']),
+            'address' => $data['address'],
+            'usertype' => $data['usertype'],
+            'phone' => $data['phone'],
 
             'othernames' => $data['othernames'],
             'preferedcontact' => $data['preferedcontact'],
 
-            'occupation' => Hash::make($data['password']),
+            'occupation' =>$data['occupation'],
+
+            'phone' =>$data['phone'],
+
+            'magazine' =>$data['magazine'],
 
             
         ]);

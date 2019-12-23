@@ -22,27 +22,27 @@ The form HTML for the join page
   <div id="compnote">
      <p>* = Compulsory field</p>
   </div>   
-  <form method="post" id="joinform" name="joinform" action="{{ route('register') }}">
+  <form method="post" id="joinform" name="joinform" action="join.php">
      <fieldset id="formnameandemail">
         <legend>Name</legend>
         <div> <!-- simply holds names apart -->
-           <label>Username:</label>
-           <input type="text" name="name" id="name" size="50" maxlength="50" required="">
+           <label>Surname:</label>
+           <input type="text" name="surname" id="surname" size="50" maxlength="50" required="">
            <span class="requiredmarker">*</span>
         </div>
         <label>Other names:</label>
-        <input type="text" name="othernames" id="othername" size="50" maxlength="60" required="">
+        <input type="text" name="othername" id="othername" size="50" maxlength="60" required="">
         <span class="requiredmarker">*</span>
      </fieldset>
      
      <fieldset id="preferredcontact">
         <legend>Preferred Contact Method:</legend>
         Mobile phone:
-        <input type="radio" name="preferedcontact" id="contactMobile" value="mobile">
+        <input type="radio" name="contactmethod" id="contactMobile" value="mobile">
         &nbsp;&nbsp;Landline phone:
-        <input type="radio" name="preferedcontact" id="contactPhone" value="landline">
+        <input type="radio" name="contactmethod" id="contactPhone" value="landline">
         &nbsp;&nbsp;Email:
-        <input type="radio" name="preferedcontact" id="contactEmail" value="email" checked="checked">
+        <input type="radio" name="contactmethod" id="contactEmail" value="email" checked="checked">
         <div class="popup" id="contacthelp">
            <p>Please select your preferred contact method.</p>
         </div>
@@ -52,7 +52,7 @@ The form HTML for the join page
         <legend>Contact details</legend>
         <div id="mobilerow">
            <label>Mobile:</label>
-           <input type="text" name="mobile" id="mobile" size="13" maxlength="12">
+           <input type="text" name="mobilenum" id="mobilenum" size="13" maxlength="12">
            <span class="requiredmarker" id="mobilemarker" style="visibility: hidden;">*</span>
            <div class="popup" id="mobilehelp">
               Enter mobile number in following format:<br>
@@ -61,7 +61,7 @@ The form HTML for the join page
         </div>
         <div id="phonerow">
            <label>Landline:</label>
-           <input type="text" name="phone" id="phone" size="13" maxlength="13">
+           <input type="text" name="phonenum" id="phonenum" size="13" maxlength="13">
            <span class="requiredmarker" id="phonemarker" style="visibility: hidden;">*</span>  
            <div class="popup" id="phonehelp">
               Enter phone number in following format:<br>

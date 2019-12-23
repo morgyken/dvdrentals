@@ -21,6 +21,17 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/moviezone', 'HomeController@moviezone')->name('moviezone');
 Route::get('/techzone', 'HomeController@techzone')->name('techzone');
 Route::get('/contact', 'HomeController@contact')->name('contact');
-Route::get('/join', 'HomeController@join')->name('join')->middleware('auth');
+Route::get('/join', 'HomeController@join')->name('join');
 
 //$this->middleware('auth');
+
+// Authentication Routes...
+Route::get('login', 'HomeController@showLoginForm')->name('login');
+Route::post('login', 'HomeController@login');
+Route::post('logout', 'HomeController@logout')->name('logout');
+
+// Registration Routes...
+Route::get('register', 'HomeController@showRegistrationForm')->name('register');
+Route::post('register', 'HomeController@register');
+
+
